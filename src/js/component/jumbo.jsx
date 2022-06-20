@@ -1,3 +1,6 @@
+import React from "react";
+
+
 const Jumbotron = (props) => {
 	//here you have to return expected html using the properties being passed to the component
     return (
@@ -20,11 +23,12 @@ Jumbotron.propTypes = {
 
 ReactDOM.render(
 	<Jumbotron
-		title="Welcome to react"
-		description="React is the most popular rendering library in the world"
-		buttonLabel="Go to the official website"
+		title="A Warm Welcome!"
+		description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		buttonLabel="Call to Action!"
 		buttonURL="https://reactjs.org/"
 	/>,
 
 	document.querySelector("#myDiv")
 );
+export default Jumbotron;
