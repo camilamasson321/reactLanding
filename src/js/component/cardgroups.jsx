@@ -1,109 +1,35 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-const Cardcluster = (props) => {
+const Cardcluster = () => {
   //here you have to return expected html using the properties being passed to the component
+  const cardsArray = [
+    { title: "Card 1",
+  photoURL: "https://picsum.photos/300/300",
+content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex" },
+    { title: "Card 2", photoURL: "https://picsum.photos/300/300", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex", },
+    { title: "Card 3", photoURL:"https://picsum.photos/300/300", content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex", },
+    { title: "Card 4",photoURL:"https://picsum.photos/300/300", content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex",},
+  ];
+  const cards = cardsArray.map((card, i) => {
+    return (
+      <div className="card" key={i} style={{width: "30rem"}}>
+      <img src={card.photoURL} className="card-img-top" alt="..." />
+      <div className="card-body">
+        <h5 className="card-title">{card.title}</h5>
+        <p className="card-text">{card.content}</p>
+        <a href="#" className="btn btn-primary">Find out More!</a>
+      </div>
+    </div>
+    );
+  
+  });
   return (
-    <div className="row row-cols-1 row-cols-md-4 g-4 m-2">
-      <div className="card col">
-        <img src={props.imageURL} className="card-img-top" alt="..."></img>
-        <div className="card-body">
-          <h5 className="card-title d-flex justify-content-center">
-            {props.title}
-          </h5>
-          <p className="card-text">
-            <small className="text-muted">{props.seconddescription}</small>
-          </p>
-          <div className="card-footer row bg-transparent">
-            <a
-              href={props.buttonUrl}
-              className="btn btn-primary d-flex justify-content-center"
-            >
-              {props.buttonLabel}
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className="card col">
-        <img src={props.imageURL} className="card-img-top" alt="..."></img>
-        <div className="card-body">
-          <h5 className="card-title d-flex justify-content-center">
-            {props.title}
-          </h5>
-          <p className="card-text">
-            <small className="text-muted">{props.seconddescription}</small>
-          </p>
-          <div className="card-footer row bg-transparent">
-            <a
-              href={props.buttonUrl}
-              className="btn btn-primary d-flex justify-content-center"
-            >
-              {props.buttonLabel}
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className="card col">
-        <img src={props.imageURL} className="card-img-top" alt="..."></img>
-        <div className="card-body">
-          <h5 className="card-title d-flex justify-content-center">
-            {props.title}
-          </h5>
-          <p className="card-text">
-            <small className="text-muted">{props.seconddescription}</small>
-          </p>
-          <div className="card-footer row  bg-transparent">
-            <a
-              href={props.buttonUrl}
-              className="btn btn-primary d-flex justify-content-center"
-            >
-              {props.buttonLabel}
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className="card col">
-        <img src={props.imageURL} className="card-img-top" alt="..."></img>
-        <div className="card-body">
-          <h5 className="card-title d-flex justify-content-center">
-            {props.title}
-          </h5>
-          <p className="card-text">
-            <small className="text-muted">{props.seconddescription}</small>
-          </p>
-          <div className="card-footer row  bg-transparent">
-            <a
-              href={props.buttonUrl}
-              className="btn btn-primary d-flex justify-content-center"
-            >
-              {props.buttonLabel}
-            </a>
-          </div>
-        </div>
-      </div>
+    <div className="d-flex justify-content-evenly align-items-center">
+      {cards}
     </div>
   );
 };
 
-Cardcluster.PropTypes = {
-  //proptypes here
-  title: PropTypes.string,
-  description: PropTypes.string,
-  seconddescription: PropTypes.string,
-  imageURL: PropTypes.string,
-  buttonURL: PropTypes.string,
-  buttonLabel: PropTypes.string,
-};
-
-// ReactDOM.render(
-// 	<Cardcluster
-// 	  title="Cool Card"
-//     description="I love this card"
-//     seconddescription="this is the best card"
-//     buttonURL="Find out More!"
-// 	/>,
-
-// 	document.querySelector("#myDiv")
-//   );
 
 export default Cardcluster;
+// style={{width: "27rem"}}

@@ -55,12 +55,5 @@ Navbarra.propTypes = {
   navbarname: PropTypes.string,
 };
 
-//   ReactDOM.render(
-// 	<Navbarra
-// 	  navbarname="Start Bootstrap"
-// 	/>,
-
-// 	document.querySelector("#myDiv")
-//   );
 
 export default Navbarra;
