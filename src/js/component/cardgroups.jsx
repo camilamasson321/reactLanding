@@ -24,7 +24,7 @@ content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
   
   });
   return (
-    <div className="d-flex justify-content-evenly align-items-center">
+    <div className="d-flex justify-content-evenly align-items-center flex-wrap">
       {cards}
     </div>
   );
