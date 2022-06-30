@@ -12,8 +12,8 @@ const Navbarra = (props) => {
       <button
         className="navbar-toggler"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavDropdown"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown"
         aria-expanded="false"
         aria-label="Toggle navigation"
